@@ -102,6 +102,15 @@ automatically from your Languages table above - don't duplicate them here. -->
 
 **Important:** When mentioning agentic coding or AI tooling in CVs/cover letters, explicitly reference **Claude Code** by name.
 
+## Online Application Tracker (Google Drive)
+The central record of every vacancy and application is a native Google Sheet in Google Drive. Full, non-sensitive setup notes live next to it in `JOB_APPLICATION_SETUP.md`; read them, then read the tracker's latest contents, before any job-link or application work.
+- **Drive folder:** "Applications - Claude" - https://drive.google.com/drive/folders/1Gk38p9kktDafhxiyvZXC1X7XRPF9q-hh (ID `1Gk38p9kktDafhxiyvZXC1X7XRPF9q-hh`)
+- **Tracker:** "Job Application Tracker" - https://docs.google.com/spreadsheets/d/17W1KPqW3QEIKwLTniscIvnWnC2WaObVqKFvN3xXiU7I/edit (ID `17W1KPqW3QEIKwLTniscIvnWnC2WaObVqKFvN3xXiU7I`; sheets `Applications`, `Summary`)
+- **Setup notes:** `JOB_APPLICATION_SETUP.md` - https://drive.google.com/file/d/1vIX65Sxu_hwv07ppSh1Fdgcbb-lTx1Zu/view
+- **Subfolders:** Tailored CVs (`1ewvkmdJi1Gw8HYRfsk3JVpJ19RrIWu9T`), Cover Letters (`1YaTEFvIuvK7PRY4ZQ6tWCzu18id-fIXp`), Application Confirmations (`1_JrwImYQbxgN7otjX0pnvnghvDpc4Qe-`)
+- **Access:** the Google Drive and Google Sheets claude.ai connectors (no credentials in the repo). Read with Sheets `get_values`, edit the same file in place with `update_values` / `update_spreadsheet`; never create a second tracker.
+- **Rules:** one row per unique vacancy (check for duplicates first), Job IDs `JOB-0001`, `JOB-0002`, ... never reused; new jobs start "Not applied" / Applied? "No". Apply only after explicit user authorization. Mark "In progress" when work starts; "Submitted" + Applied? "Yes" + date + confirmation reference only after confirmed submission; "Blocked" with the problem and next action when something fails; record uncertainty instead of claiming success. Update and read back the online tracker right after every attempt, and check it before any retry. Test rows use `TEST-` IDs and are deleted afterwards.
+
 ## Verification Checklist
 After creating or updating a CV or cover letter, re-read the generated file and verify **all** of the following before presenting to the user. Report the results as a pass/fail checklist.
 
